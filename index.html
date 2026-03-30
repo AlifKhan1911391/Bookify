@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bookify — Free PDF Library</title>
+  <title>Gratis Pages — Free PDF Library</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 
   <style>
     /* ════════════════════════════════════════
@@ -46,6 +46,7 @@
       overflow-x: hidden;
     }
 
+    /* Ambient glow */
     body::before {
       content: '';
       position: fixed;
@@ -76,35 +77,38 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 2rem;
-      height: 68px;
+      height: 70px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
+    /* Wordmark */
     .logo-wrap {
       display: flex;
-      align-items: center;
-      gap: 0.75rem;
+      align-items: baseline;
+      gap: 0;
       text-decoration: none;
+      line-height: 1;
     }
 
-    .logo-img {
-      width: 36px;
-      height: 36px;
-      object-fit: contain;
-      border-radius: 8px;
-    }
-
-    .logo-text {
+    .logo-gratis {
       font-family: var(--serif);
-      font-size: 1.5rem;
+      font-size: 1.55rem;
       font-weight: 700;
       color: var(--cream);
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
     }
 
-    .logo-text span { color: var(--gold); }
+    .logo-pages {
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--gold);
+      letter-spacing: -0.02em;
+      margin-left: 0.3rem;
+    }
 
     .nav-right {
       display: flex;
@@ -113,12 +117,13 @@
     }
 
     .nav-tagline {
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       color: var(--muted);
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
     }
 
+    /* Menu button */
     .menu-btn {
       display: flex;
       align-items: center;
@@ -167,7 +172,7 @@
       z-index: 1;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 5rem 2rem 3.5rem;
+      padding: 5.5rem 2rem 3.5rem;
       text-align: center;
     }
 
@@ -197,12 +202,15 @@
       animation: fadeUp 0.8s 0.1s ease both;
     }
 
-    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
 
     .hero-sub {
       font-size: 1.05rem;
       color: var(--muted);
-      max-width: 500px;
+      max-width: 520px;
       margin: 0 auto;
       animation: fadeUp 0.9s 0.2s ease both;
     }
@@ -223,7 +231,7 @@
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 0.85rem 3rem 0.85rem 3.2rem;
+      padding: 0.9rem 3rem 0.9rem 3.2rem;
       color: var(--text);
       font-family: var(--sans);
       font-size: 0.92rem;
@@ -269,7 +277,7 @@
     .search-clear.visible { display: block; }
 
     /* ════════════════════════════════════════
-       SECTION / GRID
+       SECTION
     ════════════════════════════════════════ */
     .section {
       position: relative;
@@ -307,6 +315,9 @@
       font-weight: 500;
     }
 
+    /* ════════════════════════════════════════
+       BOOK GRID
+    ════════════════════════════════════════ */
     .book-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -441,10 +452,7 @@
       transition: var(--t);
     }
 
-    .book-card:hover .card-arrow {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    .book-card:hover .card-arrow { opacity: 1; transform: translateX(0); }
 
     /* ════════════════════════════════════════
        EMPTY STATE
@@ -476,10 +484,7 @@
       transition: opacity 0.38s ease;
     }
 
-    .drawer-backdrop.open {
-      opacity: 1;
-      pointer-events: all;
-    }
+    .drawer-backdrop.open { opacity: 1; pointer-events: all; }
 
     /* ════════════════════════════════════════
        DRAWER PANEL
@@ -551,7 +556,6 @@
     .drawer-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
 
     .drawer-section { padding: 1.5rem 1.5rem 1.25rem; }
-
     .drawer-divider { height: 1px; background: var(--border); margin: 0 1.5rem; }
 
     .ds-header {
@@ -577,8 +581,7 @@
        REQUEST FORM
     ════════════════════════════════════════ */
     .request-form { display: flex; flex-direction: column; gap: 0.9rem; }
-
-    .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+    .form-group   { display: flex; flex-direction: column; gap: 0.35rem; }
 
     .form-label {
       font-size: 0.74rem;
@@ -644,19 +647,9 @@
       display: none;
     }
 
-    .form-msg.success {
-      background: rgba(74,222,128,0.1);
-      color: #4ade80;
-      border: 1px solid rgba(74,222,128,0.2);
-    }
-
-    .form-msg.error {
-      background: rgba(248,113,113,0.1);
-      color: #f87171;
-      border: 1px solid rgba(248,113,113,0.2);
-    }
-
-    .form-msg.show { display: block; }
+    .form-msg.success { background: rgba(74,222,128,0.1); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); }
+    .form-msg.error   { background: rgba(248,113,113,0.1); color: #f87171; border: 1px solid rgba(248,113,113,0.2); }
+    .form-msg.show    { display: block; }
 
     /* ════════════════════════════════════════
        DEVELOPER CARD
@@ -745,7 +738,12 @@
     }
 
     .footer-text { font-size: 0.8rem; color: var(--muted); }
-    .footer-text strong { color: var(--gold); font-family: var(--serif); }
+    .footer-brand {
+      font-family: var(--serif);
+      font-weight: 700;
+      color: var(--cream);
+    }
+    .footer-brand span { font-style: italic; color: var(--gold); font-weight: 400; }
 
     /* ════════════════════════════════════════
        ANIMATIONS
@@ -759,13 +757,13 @@
        RESPONSIVE
     ════════════════════════════════════════ */
     @media (max-width: 640px) {
-      .nav-tagline { display: none; }
+      .nav-tagline    { display: none; }
       .menu-btn-label { display: none; }
-      .hero { padding: 3.5rem 1.25rem 2.5rem; }
+      .hero    { padding: 3.5rem 1.25rem 2.5rem; }
       .section { padding: 0 1.25rem 4rem; }
-      .book-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .book-grid   { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
       .search-wrap { margin-bottom: 2rem; }
-      .drawer { width: 100vw; }
+      .drawer      { width: 100vw; }
     }
 
     @media (max-width: 360px) {
@@ -782,9 +780,8 @@
     <div class="nav-inner">
 
       <a class="logo-wrap" href="index.html">
-        <img class="logo-img" src="logo.png" alt="Bookify logo"
-             onerror="this.style.display='none'"/>
-        <span class="logo-text">Book<span>ify</span></span>
+        <span class="logo-gratis">Gratis</span>
+        <span class="logo-pages">Pages</span>
       </a>
 
       <div class="nav-right">
@@ -811,16 +808,17 @@
       Great Books,<br/><em>Completely Free</em>
     </h1>
     <p class="hero-sub">
-      Explore our curated collection of classic and bestselling books &mdash; available as free PDFs, instantly.
+      Explore our curated collection of classic and bestselling books &mdash;
+      available as free PDFs, instantly.
     </p>
   </section>
 
   <!-- ══════════════════════════════════════
-       MAIN — SEARCH + GRID
+       MAIN
   ══════════════════════════════════════ -->
   <main class="section">
 
-    <!-- Search Bar -->
+    <!-- Search -->
     <div class="search-wrap">
       <svg class="search-icon" width="17" height="17" viewBox="0 0 17 17" fill="none">
         <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
@@ -842,14 +840,14 @@
       </button>
     </div>
 
-    <!-- Section Heading -->
+    <!-- Heading -->
     <div class="section-header">
       <span class="section-label">All Books</span>
       <div class="section-line"></div>
       <span class="section-count" id="bookCount">3 titles</span>
     </div>
 
-    <!-- Book Grid — filled by JS -->
+    <!-- Grid -->
     <div class="book-grid" id="bookGrid"></div>
 
   </main>
@@ -859,7 +857,9 @@
   ══════════════════════════════════════ -->
   <footer>
     <p class="footer-text">
-      &copy; 2025 <strong>Bookify</strong> &mdash; Free books for curious minds.
+      &copy; 2025
+      <span class="footer-brand">Gratis<span>Pages</span></span>
+      &mdash; Free books for curious minds.
     </p>
   </footer>
 
@@ -873,7 +873,6 @@
   ══════════════════════════════════════ -->
   <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Side menu">
 
-    <!-- Drawer Header -->
     <div class="drawer-header">
       <span class="drawer-title">Menu</span>
       <button class="drawer-close" id="drawerClose" aria-label="Close menu">
@@ -883,10 +882,9 @@
       </button>
     </div>
 
-    <!-- Drawer Body -->
     <div class="drawer-body">
 
-      <!-- Section 1: Missing Book Request -->
+      <!-- Section 1: Missing Book -->
       <div class="drawer-section">
         <div class="ds-header">
           <span class="ds-icon">&#128236;</span>
@@ -967,7 +965,7 @@
           <span class="ds-icon">&#128104;&#8205;&#128187;</span>
           <div>
             <p class="ds-title">About the Developer</p>
-            <p class="ds-sub">The mind behind Bookify</p>
+            <p class="ds-sub">The mind behind Gratis Pages</p>
           </div>
         </div>
 
@@ -1035,7 +1033,7 @@
 
     /* ──────────────────────────────────────
        BOOKS DATA
-       name, photo, author, slug
+       Fields: name, photo, author, slug
        Add new books by pushing to this array
     ────────────────────────────────────── */
     var books = [
@@ -1060,7 +1058,7 @@
     ];
 
     /* ──────────────────────────────────────
-       RENDER CARDS
+       RENDER BOOK CARDS
     ────────────────────────────────────── */
     var NO_COVER =
       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'" +
@@ -1071,12 +1069,12 @@
       "%3C/svg%3E";
 
     function createCard(book) {
-      var a        = document.createElement('a');
-      a.className  = 'book-card';
-      a.href       = 'books/' + book.slug + '.html';
-      a.title      = book.name;
+      var a       = document.createElement('a');
+      a.className = 'book-card';
+      a.href      = 'books/' + book.slug + '.html';
+      a.title     = book.name;
       a.setAttribute('aria-label', book.name + ' by ' + book.author);
-      a.innerHTML  =
+      a.innerHTML =
         '<div class="card-cover-wrap">' +
           '<img src="' + book.photo + '" alt="' + book.name + ' cover" loading="lazy"' +
                ' onerror="this.src=\'' + NO_COVER + '\'"/>' +
@@ -1094,7 +1092,6 @@
     var grid    = document.getElementById('bookGrid');
     var countEl = document.getElementById('bookCount');
 
-    // Empty state node
     var emptyEl       = document.createElement('div');
     emptyEl.className = 'empty-state';
     emptyEl.innerHTML =
@@ -1103,7 +1100,6 @@
       '<p class="empty-sub">Try a different title or author name</p>';
     grid.appendChild(emptyEl);
 
-    // Build card index
     var cardMap = books.map(function(book) {
       return {
         book: book,
@@ -1112,9 +1108,7 @@
       };
     });
 
-    cardMap.forEach(function(item) {
-      grid.insertBefore(item.card, emptyEl);
-    });
+    cardMap.forEach(function(item) { grid.insertBefore(item.card, emptyEl); });
 
     function updateCount(n) {
       countEl.textContent = n === 1 ? '1 title' : n + ' titles';
@@ -1131,30 +1125,21 @@
     function filterBooks(query) {
       var q       = query.trim().toLowerCase();
       var visible = 0;
-
       cardMap.forEach(function(item) {
         var match = !q || item.key.indexOf(q) !== -1;
         item.card.style.display = match ? '' : 'none';
         if (match) visible++;
       });
-
       updateCount(visible);
-      if (query.length > 0) {
-        searchClear.classList.add('visible');
-      } else {
-        searchClear.classList.remove('visible');
-      }
-      if (visible === 0) {
-        emptyEl.classList.add('visible');
-      } else {
-        emptyEl.classList.remove('visible');
-      }
+      query.length > 0
+        ? searchClear.classList.add('visible')
+        : searchClear.classList.remove('visible');
+      visible === 0
+        ? emptyEl.classList.add('visible')
+        : emptyEl.classList.remove('visible');
     }
 
-    searchInput.addEventListener('input', function(e) {
-      filterBooks(e.target.value);
-    });
-
+    searchInput.addEventListener('input', function(e) { filterBooks(e.target.value); });
     searchClear.addEventListener('click', function() {
       searchInput.value = '';
       filterBooks('');
@@ -1188,11 +1173,8 @@
     menuBtn.addEventListener('click', openDrawer);
     drawerClose.addEventListener('click', closeDrawer);
     drawerBackdrop.addEventListener('click', closeDrawer);
-
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && drawer.classList.contains('open')) {
-        closeDrawer();
-      }
+      if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
     });
 
     /* ──────────────────────────────────────
@@ -1203,18 +1185,17 @@
     var formError   = document.getElementById('formError');
     var submitBtn   = document.getElementById('submitBtn');
 
-    var SEND_ICON =
+    var SEND_BTN_HTML =
       '<svg width="15" height="15" viewBox="0 0 15 15" fill="none">' +
         '<path d="M1 7.5H14M14 7.5L8 1.5M14 7.5L8 13.5"' +
         ' stroke="currentColor" stroke-width="1.6"' +
         ' stroke-linecap="round" stroke-linejoin="round"/>' +
-      '</svg>';
+      '</svg> Send Request';
 
     requestForm.addEventListener('submit', function(e) {
       e.preventDefault();
       formSuccess.classList.remove('show');
       formError.classList.remove('show');
-
       submitBtn.disabled   = true;
       submitBtn.textContent = 'Sending...';
 
@@ -1224,19 +1205,13 @@
         headers: { 'Accept': 'application/json' }
       })
       .then(function(res) {
-        if (res.ok) {
-          formSuccess.classList.add('show');
-          requestForm.reset();
-        } else {
-          formError.classList.add('show');
-        }
+        if (res.ok) { formSuccess.classList.add('show'); requestForm.reset(); }
+        else         { formError.classList.add('show'); }
       })
-      .catch(function() {
-        formError.classList.add('show');
-      })
+      .catch(function() { formError.classList.add('show'); })
       .finally(function() {
-        submitBtn.disabled   = false;
-        submitBtn.innerHTML  = SEND_ICON + ' Send Request';
+        submitBtn.disabled  = false;
+        submitBtn.innerHTML = SEND_BTN_HTML;
       });
     });
 
