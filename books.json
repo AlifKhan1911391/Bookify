@@ -152,11 +152,19 @@
     "pdfUrl": "https://cdn.penguin.co.uk/dam-assets/books/9781785044762/9781785044762-sample.pdf"
   },
   {
-    "name": "The Lwas of Human Nature",
-    "photo": "covers/the-lwas-of-human-nature-1774975607197.jpg",
+    "name": "The Laws of Human Nature",
+    "photo": "covers/the-laws-of-human-nature-1774975363578.jpg",
     "author": "Robert Greene",
     "genre": "Self-Help",
-    "slug": "the-lwas-of-human-nature",
+    "slug": "the-laws-of-human-nature",
     "pdfUrl": "https://centralcollegegh.com/wp-content/uploads/2023/09/The-Laws-of-Human-Nature-by-Robert-Greene-z-lib.org_.pdf"
+  },
+  {
+    "name": "The Victor Protocol (Bangla)",
+    "photo": "covers/the-victor-protocol-bangla-1774975710517.png",
+    "author": "Mahadi Islam Alif",
+    "genre": "Psychology",
+    "slug": "the-victor-protocol-bangla",
+    "pdfUrl": "pdfs/the-victor-protocol-bangla-1774975710517.pdf"
   }
 ]
