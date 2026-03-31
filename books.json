@@ -118,5 +118,13 @@
     "genre": "History",
     "slug": "mein-kampf",
     "pdfUrl": "https://hcommons.org/app/uploads/sites/1002664/2021/12/meinkampf.pdf"
+  },
+  {
+    "name": "Sapiens: A Brief History of Humankind",
+    "photo": "covers/sapiens-a-brief-history-of-humankind-1774958461433.jpg",
+    "author": "Yuval Noah Harari",
+    "genre": "History",
+    "slug": "sapiens-a-brief-history-of-humankind",
+    "pdfUrl": "https://staibabussalamsula.ac.id/wp-content/uploads/2023/11/yuval_noah_harari-sapiens_a_brief_histor.pdf"
   }
 ]
