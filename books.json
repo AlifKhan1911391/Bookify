@@ -110,5 +110,13 @@
     "genre": "Finance",
     "slug": "the-psychology-of-money",
     "pdfUrl": "https://tiue.uz/wp-content/uploads/2024/02/The-Psychology-of-Money-Morgan-Housel.pdf"
+  },
+  {
+    "name": "The Subtle Art of Not Giving a F*ck",
+    "photo": "covers/the-subtle-art-of-not-giving-a-fck-1774957919929.png",
+    "author": "Mark Manson",
+    "genre": "Self-Help",
+    "slug": "the-subtle-art-of-not-giving-a-fck",
+    "pdfUrl": "pdfs/the-subtle-art-of-not-giving-a-fck-1774957919929.pdf"
   }
 ]
