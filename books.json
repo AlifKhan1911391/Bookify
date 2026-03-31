@@ -150,5 +150,13 @@
     "genre": "Self-Help",
     "slug": "surrounded-by-liars",
     "pdfUrl": "https://cdn.penguin.co.uk/dam-assets/books/9781785044762/9781785044762-sample.pdf"
+  },
+  {
+    "name": "The Lwas of Human Nature",
+    "photo": "covers/the-lwas-of-human-nature-1774975607197.jpg",
+    "author": "Robert Greene",
+    "genre": "Self-Help",
+    "slug": "the-lwas-of-human-nature",
+    "pdfUrl": "https://centralcollegegh.com/wp-content/uploads/2023/09/The-Laws-of-Human-Nature-by-Robert-Greene-z-lib.org_.pdf"
   }
 ]
