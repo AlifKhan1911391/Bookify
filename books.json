@@ -182,5 +182,13 @@
     "genre": "Psychology",
     "slug": "the-puppet-master",
     "pdfUrl": "pdfs/the-puppet-master-1774975826892.pdf"
+  },
+  {
+    "name": "The Subtle Art of Not Giving a F*ck",
+    "photo": "covers/the-subtle-art-of-not-giving-a-fck-1774976033238.jpg",
+    "author": "Mark Manson",
+    "genre": "Self-Help",
+    "slug": "the-subtle-art-of-not-giving-a-fck",
+    "pdfUrl": "pdfs/the-subtle-art-of-not-giving-a-fck-1774976033238.pdf"
   }
 ]
