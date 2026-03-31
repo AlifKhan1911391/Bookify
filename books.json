@@ -94,5 +94,13 @@
     "genre": "Other",
     "slug": "the-way-of-the-heavy-hand",
     "pdfUrl": "pdfs/the-way-of-the-heavy-hand-1774953983504.pdf"
+  },
+  {
+    "name": "Meditations",
+    "photo": "covers/meditations-1774956128903.jpg",
+    "author": "Marcus Aurelius",
+    "genre": "Philosophy",
+    "slug": "meditations",
+    "pdfUrl": "https://dn720006.ca.archive.org/0/items/meditationsofmar00marc/meditationsofmar00marc.pdf"
   }
 ]
