@@ -127,7 +127,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gratispages.netlify.app/book.html?slug=the-lwas-of-human-nature</loc>
+    <loc>https://gratispages.netlify.app/book.html?slug=the-laws-of-human-nature</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gratispages.netlify.app/book.html?slug=the-victor-protocol-bangla</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
