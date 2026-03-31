@@ -62,5 +62,13 @@
     "genre": "Self-Help",
     "slug": "the-things-you-can-see-only-when-you-slow-down-how-to-be-calm-in-a-busy-world",
     "pdfUrl": "https://www.msbkwt.com/images/Files_2019_20/Library/Haemin_Sunim_-_The_Things_You_Can_See_Only_When_You_Slow_Down.pdf"
+  },
+  {
+    "name": "Deep Work",
+    "photo": "covers/deep-work-1774952330662.jpg",
+    "author": "Cal Newport",
+    "genre": "Self-Help",
+    "slug": "deep-work",
+    "pdfUrl": "https://cpcglobal.org/publications/Deep%20Work.pdf"
   }
 ]
