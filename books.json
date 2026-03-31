@@ -46,5 +46,13 @@
     "genre": "Self-Help",
     "slug": "atomichabits",
     "pdfUrl": "https://dn790007.ca.archive.org/0/items/atomic-habits-pdfdrive/Atomic%20habits%20%28%20PDFDrive%20%29.pdf"
+  },
+  {
+    "name": "Mastery",
+    "photo": "covers/mastery-1774935179823.jpg",
+    "author": "Robert Greene",
+    "genre": "Self-Help",
+    "slug": "mastery",
+    "pdfUrl": "https://dn790002.ca.archive.org/0/items/mastery-by-robert-greene/Mastery%20by%20Robert%20Greene.pdf"
   }
 ]
