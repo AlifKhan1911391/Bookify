@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#0c0d16" />
+<meta name="robots" content="index, follow" />
+<title>Privacy Policy — Gratis Pages</title>
+<meta name="description" content="Privacy Policy for Gratis Pages. Learn how we collect, use, and protect your data in compliance with GDPR, CCPA, Google AdSense, and Google Analytics." />
+<link rel="canonical" href="https://gratispages.netlify.app/policy.html" />
+<link rel="icon" href="/logo.png" type="image/png" />
+<link rel="shortcut icon" href="/logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="/logo.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://gratispages.netlify.app/policy.html" />
+<meta property="og:title" content="Privacy Policy — Gratis Pages" />
+<meta property="og:description" content="How Gratis Pages collects, uses, and protects your personal data in compliance with global privacy laws." />
+<meta property="og:image" content="https://gratispages.netlify.app/logo.png" />
+<meta property="og:site_name" content="Gratis Pages" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+<style>
+/* ─── DESIGN TOKENS ─── */
+:root {
+  --bg:        #09090f;
+  --bg-card:   #111219;
+  --bg-card-h: #181924;
+  --border:    rgba(255,255,255,0.06);
+  --border-h:  rgba(232,168,56,0.3);
+  --gold:      #e8a838;
+  --gold-dim:  rgba(232,168,56,0.10);
+  --gold-glow: rgba(232,168,56,0.22);
+  --cream:     #ede7d3;
+  --cream-dim: rgba(237,231,211,0.55);
+  --muted:     #6b7090;
+  --text:      #d4d8ee;
+  --serif:     'Cormorant Garamond', Georgia, serif;
+  --sans:      'Outfit', sans-serif;
+  --radius:    14px;
+  --t:         0.38s cubic-bezier(0.22, 1, 0.36, 1);
+  --max:       780px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Grain overlay */
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 999; opacity: 0.35;
+}
+
+/* Radial glow */
+body::before {
+  content: '';
+  position: fixed; top: -15%; left: 50%; transform: translateX(-50%);
+  width: 120vw; height: 70vh;
+  background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(232,168,56,0.07) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+
+/* ─── HEADER ─── */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(9,9,15,0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: 1260px; margin: 0 auto;
+  padding: 0 2rem; height: 68px;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.logo-wrap {
+  display: flex; align-items: baseline; gap: 0;
+  text-decoration: none; line-height: 1; flex-shrink: 0;
+}
+.logo-g { font-family: var(--serif); font-size: 1.7rem; font-weight: 700; color: var(--cream); letter-spacing: -0.02em; }
+.logo-p { font-family: var(--serif); font-size: 1.7rem; font-weight: 400; font-style: italic; color: var(--gold); letter-spacing: -0.02em; margin-left: 0.28rem; }
+
+.nav-back {
+  display: flex; align-items: center; gap: 0.45rem;
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+  color: var(--muted); text-decoration: none;
+  border: 1px solid var(--border); border-radius: 9px;
+  padding: 0.45rem 0.9rem; background: var(--bg-card);
+  transition: var(--t); letter-spacing: 0.02em;
+}
+.nav-back:hover { border-color: var(--border-h); color: var(--gold); background: var(--bg-card-h); }
+.nav-back svg { flex-shrink: 0; }
+
+/* ─── PAGE WRAPPER ─── */
+.page {
+  position: relative; z-index: 1;
+  max-width: var(--max); margin: 0 auto;
+  padding: 4.5rem 2rem 8rem;
+}
+
+/* ─── HERO HEADER ─── */
+.policy-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.68rem; font-weight: 500; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 1.25rem;
+  animation: fadeUp 0.55s ease both;
+}
+.policy-eyebrow::before {
+  content: ''; display: block; width: 24px; height: 1px; background: var(--gold);
+}
+
+.policy-title {
+  font-family: var(--serif);
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  font-weight: 700; color: var(--cream);
+  line-height: 1.05; letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  animation: fadeUp 0.55s 0.06s ease both;
+}
+.policy-title em { font-style: italic; color: var(--gold); font-weight: 400; }
+
+.policy-meta {
+  display: flex; flex-wrap: wrap; gap: 0.6rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  animation: fadeUp 0.55s 0.12s ease both;
+}
+.meta-tag {
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.08em;
+  padding: 0.22rem 0.7rem; border-radius: 100px;
+  background: var(--gold-dim); color: var(--gold);
+  border: 1px solid rgba(232,168,56,0.2);
+}
+
+/* ─── TOC ─── */
+.toc {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 3rem;
+  animation: fadeUp 0.55s 0.18s ease both;
+}
+.toc-title {
+  font-family: var(--serif); font-size: 1rem; font-weight: 700;
+  color: var(--cream); margin-bottom: 1rem; letter-spacing: 0.01em;
+}
+.toc ol {
+  list-style: none; counter-reset: toc-counter;
+  display: flex; flex-direction: column; gap: 0.35rem;
+}
+.toc ol li { counter-increment: toc-counter; display: flex; align-items: baseline; gap: 0.6rem; }
+.toc ol li::before {
+  content: counter(toc-counter, decimal-leading-zero);
+  font-size: 0.62rem; font-weight: 600; color: var(--gold);
+  letter-spacing: 0.05em; flex-shrink: 0; min-width: 1.6rem;
+}
+.toc ol li a {
+  font-size: 0.82rem; color: var(--muted); text-decoration: none;
+  transition: color var(--t); line-height: 1.4;
+}
+.toc ol li a:hover { color: var(--gold); }
+
+/* ─── SECTIONS ─── */
+.policy-section {
+  margin-bottom: 3.5rem;
+  animation: fadeUp 0.55s ease both;
+}
+
+.section-num {
+  font-size: 0.62rem; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold); display: block;
+  margin-bottom: 0.4rem;
+}
+
+.section-heading {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 700; color: var(--cream);
+  line-height: 1.15; letter-spacing: -0.01em;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-body p {
+  font-size: 0.9rem; color: var(--text); line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.section-body p:last-child { margin-bottom: 0; }
+
+.section-body strong { color: var(--cream); font-weight: 600; }
+.section-body em { color: var(--cream-dim); font-style: italic; }
+
+.section-body a {
+  color: var(--gold); text-decoration: none;
+  border-bottom: 1px dotted rgba(232,168,56,0.4);
+  transition: var(--t);
+}
+.section-body a:hover { color: var(--cream); border-bottom-color: var(--gold); }
+
+/* Sub-heading inside section */
+.sub-heading {
+  font-family: var(--serif); font-size: 1.1rem; font-weight: 600;
+  color: var(--cream); margin: 1.75rem 0 0.6rem; letter-spacing: -0.01em;
+}
+
+/* Highlight box */
+.highlight-box {
+  background: var(--gold-dim);
+  border: 1px solid rgba(232,168,56,0.2);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--cream);
+}
+.highlight-box strong { color: var(--gold); }
+
+/* Info card (for third-party services) */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  transition: border-color var(--t);
+}
+.service-card:hover { border-color: var(--border-h); }
+.service-card-name {
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.35rem;
+}
+.service-card-desc {
+  font-size: 0.78rem; color: var(--muted); line-height: 1.55;
+  margin-bottom: 0.55rem;
+}
+.service-card a {
+  font-size: 0.72rem; color: var(--gold); text-decoration: none;
+  border-bottom: 1px dotted rgba(232,168,56,0.3);
+}
+.service-card a:hover { color: var(--cream); }
+
+/* Rights list */
+.rights-list {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+.rights-list li {
+  display: flex; gap: 0.75rem; align-items: flex-start;
+  font-size: 0.875rem; line-height: 1.65;
+}
+.rights-list li::before {
+  content: '→';
+  color: var(--gold); font-size: 0.8rem;
+  flex-shrink: 0; margin-top: 0.15rem; font-weight: 600;
+}
+.rights-list strong { color: var(--cream); }
+
+/* Cookie table */
+.cookie-table-wrap { overflow-x: auto; margin: 1.25rem 0; border-radius: 10px; border: 1px solid var(--border); }
+table {
+  width: 100%; border-collapse: collapse;
+  font-size: 0.8rem;
+}
+thead tr { background: var(--bg-card-h); }
+thead th {
+  padding: 0.75rem 1rem; text-align: left;
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold);
+  border-bottom: 1px solid var(--border);
+}
+tbody tr { border-bottom: 1px solid var(--border); }
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover { background: rgba(255,255,255,0.02); }
+tbody td {
+  padding: 0.7rem 1rem; color: var(--text); line-height: 1.5;
+  vertical-align: top;
+}
+tbody td:first-child { color: var(--cream); font-weight: 500; }
+
+/* Contact box */
+.contact-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-h);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  margin-top: 1.5rem;
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.contact-box-label {
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--gold);
+}
+.contact-box-name {
+  font-family: var(--serif); font-size: 1.3rem; font-weight: 700; color: var(--cream);
+}
+.contact-box-detail { font-size: 0.85rem; color: var(--muted); }
+.contact-box-detail a { color: var(--gold); text-decoration: none; border-bottom: 1px dotted rgba(232,168,56,0.4); }
+.contact-box-detail a:hover { color: var(--cream); }
+
+/* Divider */
+.section-divider { height: 1px; background: var(--border); margin: 0 0 3.5rem; }
+
+/* Footer note */
+.policy-footer {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.policy-footer a { color: var(--gold); text-decoration: none; }
+.policy-footer a:hover { text-decoration: underline; }
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 600px) {
+  .page { padding: 3rem 1.25rem 6rem; }
+  .nav-inner { padding: 0 1.25rem; }
+  .service-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── SCROLL INDICATOR ─── */
+.scroll-line {
+  position: fixed; top: 68px; left: 0; height: 2px; z-index: 101;
+  background: linear-gradient(to right, var(--gold), transparent);
+  width: 0%; transition: width 0.1s linear;
+}
+</style>
+</head>
+<body>
+
+<div class="scroll-line" id="scrollLine"></div>
+
+<header>
+  <div class="nav-inner">
+    <a class="logo-wrap" href="/">
+      <span class="logo-g">Gratis</span>
+      <span class="logo-p">Pages</span>
+    </a>
+    <a class="nav-back" href="/">
+      <svg aria-hidden="true" width="13" height="13" viewBox="0 0 13 13" fill="none">
+        <path d="M8 2L3 6.5L8 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to Library
+    </a>
+  </div>
+</header>
+
+<main class="page">
+
+  <p class="policy-eyebrow">Legal &amp; Transparency</p>
+  <h1 class="policy-title">Privacy <em>Policy</em></h1>
+  <div class="policy-meta">
+    <span class="meta-tag">Effective: April 1, 2026</span>
+    <span class="meta-tag">GDPR Compliant</span>
+    <span class="meta-tag">CCPA Compliant</span>
+    <span class="meta-tag">Google AdSense</span>
+    <span class="meta-tag">Google Analytics 4</span>
+    <span class="meta-tag">AdMob</span>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#s1">Who We Are</a></li>
+      <li><a href="#s2">Information We Collect</a></li>
+      <li><a href="#s3">How We Use Your Information</a></li>
+      <li><a href="#s4">Cookies &amp; Tracking Technologies</a></li>
+      <li><a href="#s5">Third-Party Services &amp; Advertising</a></li>
+      <li><a href="#s6">Google AdSense, AdMob &amp; Advertising</a></li>
+      <li><a href="#s7">Google Analytics 4</a></li>
+      <li><a href="#s8">Google Search Console</a></li>
+      <li><a href="#s9">Formspree (Book Request Form)</a></li>
+      <li><a href="#s10">Data Sharing &amp; Disclosure</a></li>
+      <li><a href="#s11">Data Retention</a></li>
+      <li><a href="#s12">Data Security</a></li>
+      <li><a href="#s13">International Data Transfers</a></li>
+      <li><a href="#s14">Your Rights — GDPR (EU / EEA Users)</a></li>
+      <li><a href="#s15">Your Rights — CCPA (California Users)</a></li>
+      <li><a href="#s16">Your Rights — Bangladesh &amp; General Users</a></li>
+      <li><a href="#s17">Children's Privacy</a></li>
+      <li><a href="#s18">Third-Party Links</a></li>
+      <li><a href="#s19">Changes to This Policy</a></li>
+      <li><a href="#s20">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <section class="policy-section" id="s1">
+    <span class="section-num">01</span>
+    <h2 class="section-heading">Who We Are</h2>
+    <div class="section-body">
+      <p>
+        <strong>Gratis Pages</strong> (<a href="https://gratispages.netlify.app" target="_blank" rel="noopener">gratispages.netlify.app</a>) is a free digital library that provides access to PDF books at no cost and without requiring user registration. The site is owned and operated by <strong>Mahadi Islam Alif</strong>, an individual based in <strong>Bangladesh</strong>.
+      </p>
+      <p>
+        This Privacy Policy explains what personal data we collect, why we collect it, how it is used, and what rights you have in relation to it. By using this website, you agree to the practices described here.
+      </p>
+      <div class="highlight-box">
+        <strong>In plain language:</strong> We do not ask you to create an account. We do not sell your data. We use Google's standard services (analytics, advertising) that use cookies — and this policy tells you exactly what those do and how to opt out.
+      </div>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s2">
+    <span class="section-num">02</span>
+    <h2 class="section-heading">Information We Collect</h2>
+    <div class="section-body">
+
+      <p class="sub-heading">A. Information You Provide Directly</p>
+      <p>
+        We only receive personal data you actively submit. Currently, the only form on Gratis Pages is the <strong>Book Request Form</strong>, which collects:
+      </p>
+      <ul class="rights-list">
+        <li><strong>Book title</strong> — the book you are requesting</li>
+        <li><strong>Author name</strong> — optional, to help us locate the book</li>
+        <li><strong>Email address</strong> — so we can notify you when your request is fulfilled</li>
+        <li><strong>Optional note</strong> — any additional context you choose to share</li>
+      </ul>
+      <p>This form is processed through <strong>Formspree</strong> (see Section 9). We never use it for marketing without your explicit consent.</p>
+
+      <p class="sub-heading">B. Information Collected Automatically</p>
+      <p>
+        When you visit Gratis Pages, certain technical information is automatically collected by our third-party service providers (Google Analytics, Google AdSense). This may include:
+      </p>
+      <ul class="rights-list">
+        <li><strong>IP address</strong> — used to determine approximate geographic region (country/city level), not stored by us directly</li>
+        <li><strong>Browser type and version</strong></li>
+        <li><strong>Operating system and device type</strong></li>
+        <li><strong>Pages visited, time on page, and navigation paths</strong></li>
+        <li><strong>Referral source</strong> — how you arrived at the site (e.g. Google Search, direct link)</li>
+        <li><strong>Session duration and bounce rate</strong></li>
+        <li><strong>Cookie identifiers</strong> — assigned by Google services for analytics and ad personalisation</li>
+      </ul>
+      <p>
+        We do <strong>not</strong> collect: passwords, payment information, government ID numbers, or any sensitive personal data. We do not build individual user profiles.
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s3">
+    <span class="section-num">03</span>
+    <h2 class="section-heading">How We Use Your Information</h2>
+    <div class="section-body">
+      <p>The information collected is used for the following purposes, each with its legal basis:</p>
+      <div class="cookie-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Purpose</th>
+              <th>Legal Basis (GDPR)</th>
+              <th>Data Used</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fulfil book requests &amp; send email notifications</td>
+              <td>Contract / Legitimate Interest</td>
+              <td>Name, email, book title</td>
+            </tr>
+            <tr>
+              <td>Understand how visitors use the site (analytics)</td>
+              <td>Legitimate Interest / Consent</td>
+              <td>Usage data, cookies</td>
+            </tr>
+            <tr>
+              <td>Display relevant advertisements (AdSense / AdMob)</td>
+              <td>Consent</td>
+              <td>Cookie identifiers, approximate location</td>
+            </tr>
+            <tr>
+              <td>Improve site content and performance</td>
+              <td>Legitimate Interest</td>
+              <td>Aggregated analytics</td>
+            </tr>
+            <tr>
+              <td>Monitor search performance (Search Console)</td>
+              <td>Legitimate Interest</td>
+              <td>Aggregated query data (no PII)</td>
+            </tr>
+            <tr>
+              <td>Comply with legal obligations</td>
+              <td>Legal Obligation</td>
+              <td>As required by applicable law</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        We will never use your data for automated decision-making or profiling that produces legal or similarly significant effects on you.
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s4">
+    <span class="section-num">04</span>
+    <h2 class="section-heading">Cookies &amp; Tracking Technologies</h2>
+    <div class="section-body">
+      <p>
+        Gratis Pages uses cookies — small text files stored on your device — to make our services work properly and to serve personalised advertisements. When you first visit, a cookie consent banner is displayed. 
+      </p>
+      <div class="highlight-box">
+        <strong>Strict Consent Enforcement:</strong> Advertising and analytical tracking cookies (such as Google Analytics and Google AdSense) are completely blocked by our code from loading on your device <strong>until</strong> you explicitly click <em>"Accept Cookies"</em> on our banner.
+      </div>
+
+      <p class="sub-heading">Types of Cookies We Use</p>
+      <div class="cookie-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Cookie / Identifier</th>
+              <th>Provider</th>
+              <th>Purpose</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>_ga, _ga_*</td>
+              <td>Google Analytics 4</td>
+              <td>Distinguish unique visitors, track sessions and page views</td>
+              <td>2 years</td>
+            </tr>
+            <tr>
+              <td>_gid</td>
+              <td>Google Analytics 4</td>
+              <td>Distinguish users within a 24-hour session</td>
+              <td>24 hours</td>
+            </tr>
+            <tr>
+              <td>IDE, DSID</td>
+              <td>Google DoubleClick (AdSense/AdMob)</td>
+              <td>Personalise and measure ad effectiveness</td>
+              <td>13 months</td>
+            </tr>
+            <tr>
+              <td>test_cookie</td>
+              <td>Google DoubleClick</td>
+              <td>Check whether browser supports cookies</td>
+              <td>Session</td>
+            </tr>
+            <tr>
+              <td>NID, CONSENT</td>
+              <td>Google</td>
+              <td>Preference storage and consent tracking</td>
+              <td>6 months – 2 years</td>
+            </tr>
+            <tr>
+              <td>gp_cookie_consent</td>
+              <td>Gratis Pages (localStorage)</td>
+              <td>Remember your cookie consent choice</td>
+              <td>Persistent (localStorage)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="sub-heading">Managing &amp; Opting Out of Cookies</p>
+      <p>You have full control over cookies. You may:</p>
+      <ul class="rights-list">
+        <li>Click <strong>"Decline"</strong> on the cookie banner — non-essential cookies will never be set</li>
+        <li>Clear the <code>gp_cookie_consent</code> key from your browser's localStorage at any time to reset your choice</li>
+        <li>Use your browser settings to block or delete cookies globally</li>
+        <li>Opt out of Google Analytics tracking via <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-Out Browser Add-On</a></li>
+        <li>Opt out of personalised Google ads via <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a> or <a href="https://optout.aboutads.info/" target="_blank" rel="noopener">aboutads.info</a></li>
+        <li>Visit <a href="https://www.youronlinechoices.com/" target="_blank" rel="noopener">Your Online Choices (EU)</a> for interest-based advertising preferences</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s5">
+    <span class="section-num">05</span>
+    <h2 class="section-heading">Third-Party Services &amp; Advertising</h2>
+    <div class="section-body">
+      <p>
+        Gratis Pages relies on trusted third-party services to function and to generate revenue that keeps the library free. Each of these services has its own privacy policy, which governs their collection and use of data.
+      </p>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-card-name">Google AdSense</div>
+          <div class="service-card-desc">Displays personalised banner and text ads. Uses cookie-based targeting.</div>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-card-name">Google AdMob</div>
+          <div class="service-card-desc">Mobile advertising platform by Google. Used for in-app or mobile web ads.</div>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-card-name">Google Analytics 4</div>
+          <div class="service-card-desc">Measures traffic and user behaviour. Data is aggregated and anonymised.</div>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-card-name">Google Search Console</div>
+          <div class="service-card-desc">Monitors SEO performance. Processes aggregated search query data only.</div>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-card-name">Formspree</div>
+          <div class="service-card-desc">Processes book request form submissions. Receives name, email, and request details.</div>
+          <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener">Formspree Privacy Policy →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-card-name">Netlify</div>
+          <div class="service-card-desc">Hosts this website. May log access requests (IP, timestamp) for security.</div>
+          <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">Netlify Privacy Policy →</a>
+        </div>
+      </div>
+      <p>
+        We do not control how these third parties collect or use data. We encourage you to read their respective privacy policies before using our site if you have concerns.
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s6">
+    <span class="section-num">06</span>
+    <h2 class="section-heading">Google AdSense, AdMob &amp; Advertising</h2>
+    <div class="section-body">
+      <p>
+        Gratis Pages uses <strong>Google AdSense</strong> and <strong>Google AdMob</strong> to display advertisements. These services are provided by Google LLC (or Google Ireland Limited for users in the EEA/UK). Advertising revenue helps us keep the library free for everyone.
+      </p>
+      <p>
+        Google may use cookies, web beacons, and similar technologies to show you advertisements based on your past visits to this and other websites. This is known as <strong>interest-based advertising</strong> or <strong>remarketing</strong>.
+      </p>
+
+      <div class="highlight-box">
+        <strong>Google's EU User Consent Policy:</strong> For users in the European Economic Area (EEA), Google requires that we obtain your consent before enabling personalised advertising. Our cookie consent banner fulfils this requirement. If you decline, only non-personalised (contextual) ads may be shown, or no ads at all.
+      </div>
+
+      <p>
+        Google AdSense uses the <strong>DoubleClick cookie</strong> (IDE) to serve ads and report on ad performance. You can opt out of personalised ads from Google by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">google.com/settings/ads</a>.
+      </p>
+      <p>
+        For <strong>Google AdMob</strong> (mobile advertising), Google collects device identifiers such as the Android Advertising ID or Apple IDFA, subject to your device-level privacy settings. You can reset or opt out of interest-based ads via your device settings: <em>Settings → Privacy → Ads</em> (iOS) or <em>Settings → Google → Ads</em> (Android).
+      </p>
+      <p>
+        We do not pass any personally identifiable information to Google's advertising platforms. All data processed by Google is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s7">
+    <span class="section-num">07</span>
+    <h2 class="section-heading">Google Analytics 4</h2>
+    <div class="section-body">
+      <p>
+        We use <strong>Google Analytics 4 (GA4)</strong> to understand how visitors interact with Gratis Pages. GA4 collects data such as page views, session durations, device types, and general geographic location (country/city — never street address).
+      </p>
+      <p>
+        <strong>IP Anonymisation:</strong> GA4 anonymises IP addresses by default. We do not receive or store full IP addresses through Google Analytics.
+      </p>
+      <p>
+        <strong>Data Retention:</strong> We have configured GA4 to retain user-level and event-level data for <strong>14 months</strong>, after which it is automatically deleted from Google's servers.
+      </p>
+      <p>
+        <strong>Data Sharing:</strong> We have disabled all data-sharing settings with Google products and services beyond what is necessary to operate Analytics. We do not use GA4 to share data for advertising purposes independently.
+      </p>
+      <p>
+        You may opt out of GA4 tracking at any time by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-Out Browser Add-On</a>. GA4 data is processed under a Data Processing Agreement between us and Google, in compliance with GDPR Article 28.
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s8">
+    <span class="section-num">08</span>
+    <h2 class="section-heading">Google Search Console</h2>
+    <div class="section-body">
+      <p>
+        <strong>Google Search Console</strong> is a webmaster tool provided by Google that allows us to monitor and improve Gratis Pages' visibility in Google Search results. It does not collect personally identifiable information about individual visitors.
+      </p>
+      <p>
+        Search Console provides <strong>aggregated data</strong> only: which search queries lead users to our site, click-through rates, impressions, and technical health metrics (crawl errors, page speed, mobile usability). No individual user is identifiable from this data.
+      </p>
+      <p>
+        Search Console data is accessible only to us as the verified site owner and is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. It is used solely for the purpose of improving the website's search engine presence and technical performance.
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s9">
+    <span class="section-num">09</span>
+    <h2 class="section-heading">Formspree (Book Request Form)</h2>
+    <div class="section-body">
+      <p>
+        Our <strong>Book Request Form</strong> is powered by <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a>, a third-party form submission service. When you submit a book request, the following data is sent to and stored by Formspree:
+      </p>
+      <ul class="rights-list">
+        <li><strong>Your email address</strong> — used to notify you when your requested book is added</li>
+        <li><strong>Book title and author</strong> — to identify the book you are requesting</li>
+        <li><strong>Optional note</strong> — any message you choose to include</li>
+        <li><strong>Submission metadata</strong> — timestamp and your IP address (collected by Formspree for spam prevention)</li>
+      </ul>
+      <p>
+        Formspree stores form submissions on secure servers in the United States. They are GDPR compliant and process data under a Data Processing Agreement. Their full privacy policy is available at <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener">formspree.io/legal/privacy-policy</a>.
+      </p>
+      <p>
+        We use the data you submit <strong>only</strong> to respond to your book request. We do not use your email for marketing communications, and we do not share it with any other third party.
+      </p>
+      <p>
+        To request deletion of a form submission, email us at <a href="mailto:iamitachi494&#64;gmail.com">iamitachi494&#64;gmail.com</a> with the subject line <em>"Delete My Form Data."</em>
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s10">
+    <span class="section-num">10</span>
+    <h2 class="section-heading">Data Sharing &amp; Disclosure</h2>
+    <div class="section-body">
+      <p>
+        <strong>We do not sell, rent, or trade your personal data to any third party, ever.</strong> We share information only in the following limited circumstances:
+      </p>
+      <ul class="rights-list">
+        <li><strong>Service providers:</strong> Google (Analytics, AdSense, AdMob, Search Console) and Formspree process data strictly to provide their respective services. Each acts as a data processor under a binding agreement.</li>
+        <li><strong>Legal requirements:</strong> We may disclose information if required by law, court order, or governmental authority — but only to the minimum extent necessary and only after verifying the legal basis.</li>
+        <li><strong>Protection of rights:</strong> We may disclose information to protect the rights, property, or safety of Gratis Pages, our users, or the public, where permitted by law.</li>
+        <li><strong>Business transfer:</strong> In the unlikely event that Gratis Pages is transferred to a new owner, user data (if any) would be disclosed as part of that transaction, and users would be notified in advance.</li>
+      </ul>
+      <p>
+        In all cases, we share only the minimum data necessary and require that recipients protect it under terms at least as strict as this policy.
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s11">
+    <span class="section-num">11</span>
+    <h2 class="section-heading">Data Retention</h2>
+    <div class="section-body">
+      <div class="cookie-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Data Type</th>
+              <th>Retained By</th>
+              <th>Retention Period</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Book request form submissions</td>
+              <td>Formspree</td>
+              <td>Until you request deletion or Formspree's default retention expires</td>
+            </tr>
+            <tr>
+              <td>Analytics data (GA4)</td>
+              <td>Google</td>
+              <td>14 months from collection</td>
+            </tr>
+            <tr>
+              <td>Ad interaction data</td>
+              <td>Google AdSense / AdMob</td>
+              <td>13 months (DoubleClick cookies)</td>
+            </tr>
+            <tr>
+              <td>Search Console data</td>
+              <td>Google</td>
+              <td>16 months (aggregated, no PII)</td>
+            </tr>
+            <tr>
+              <td>Cookie consent preference</td>
+              <td>Your browser (localStorage)</td>
+              <td>Until you clear browser storage</td>
+            </tr>
+            <tr>
+              <td>Server access logs</td>
+              <td>Netlify</td>
+              <td>30 days</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        We periodically review and delete data we no longer need. You may request early deletion of any data you have provided by contacting us at the address in Section 20.
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s12">
+    <span class="section-num">12</span>
+    <h2 class="section-heading">Data Security</h2>
+    <div class="section-body">
+      <p>
+        We take the security of your data seriously and implement appropriate technical and organisational measures, including:
+      </p>
+      <ul class="rights-list">
+        <li><strong>HTTPS / TLS encryption</strong> on all pages — data in transit is encrypted</li>
+        <li><strong>No server-side storage</strong> of personal data by us directly — form data is handled by Formspree's secure infrastructure</li>
+        <li><strong>Access control</strong> — only the site owner has access to Google Analytics and Search Console data</li>
+        <li><strong>No plaintext storage</strong> of sensitive information anywhere on this site</li>
+      </ul>
+      <p>
+        However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee absolute security. In the event of a data breach that affects your rights or freedoms, we will notify you and any relevant authorities as required by law.
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s13">
+    <span class="section-num">13</span>
+    <h2 class="section-heading">International Data Transfers</h2>
+    <div class="section-body">
+      <p>
+        Gratis Pages is operated from <strong>Bangladesh</strong>. Our third-party service providers (Google, Formspree, Netlify) are based primarily in the <strong>United States</strong>. If you are located in the European Economic Area (EEA), United Kingdom, or other regions with data protection laws, your personal data may be transferred to and processed in countries that may not provide the same level of protection as your home jurisdiction.
+      </p>
+      <p>
+        <strong>Safeguards for EU/EEA users:</strong> Google and Formspree both participate in the EU–US Data Privacy Framework and use <strong>Standard Contractual Clauses (SCCs)</strong> approved by the European Commission to ensure that international transfers of personal data meet GDPR requirements.
+      </p>
+      <p>
+        By using Gratis Pages and submitting information, you consent to this transfer, storing, and processing. If you do not agree, please do not submit personal data through our forms.
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s14">
+    <span class="section-num">14</span>
+    <h2 class="section-heading">Your Rights — GDPR (EU / EEA Users)</h2>
+    <div class="section-body">
+      <p>
+        If you are located in the European Union or European Economic Area, the <strong>General Data Protection Regulation (GDPR)</strong> gives you the following rights in relation to your personal data:
+      </p>
+      <ul class="rights-list">
+        <li><strong>Right of Access (Art. 15)</strong> — You may request a copy of the personal data we hold about you.</li>
+        <li><strong>Right to Rectification (Art. 16)</strong> — You may request that inaccurate or incomplete data be corrected.</li>
+        <li><strong>Right to Erasure / "Right to be Forgotten" (Art. 17)</strong> — You may request deletion of your personal data where there is no compelling reason for us to continue processing it.</li>
+        <li><strong>Right to Restriction of Processing (Art. 18)</strong> — You may request that we limit how we process your data in certain circumstances.</li>
+        <li><strong>Right to Data Portability (Art. 20)</strong> — You may request your data in a structured, machine-readable format for transfer to another controller.</li>
+        <li><strong>Right to Object (Art. 21)</strong> — You may object to processing based on legitimate interests or for direct marketing purposes.</li>
+        <li><strong>Right not to be subject to automated decision-making (Art. 22)</strong> — We do not use automated decision-making or profiling that produces legal effects.</li>
+        <li><strong>Right to Withdraw Consent</strong> — Where processing is based on consent (e.g. advertising cookies), you may withdraw it at any time without affecting prior lawful processing.</li>
+      </ul>
+      <div class="highlight-box">
+        <strong>How to exercise your rights:</strong> Email us at <a href="mailto:iamitachi494&#64;gmail.com">iamitachi494&#64;gmail.com</a>. We will respond within <strong>30 days</strong>. If you believe we have violated your rights, you may lodge a complaint with your national Data Protection Authority (DPA). A list of EU DPAs is available at <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener">edpb.europa.eu</a>.
+      </div>
+      <p>
+        Our <strong>lawful bases</strong> for processing under GDPR are: <em>consent</em> (advertising cookies), <em>legitimate interests</em> (analytics, security), and <em>contract performance</em> (book request notifications).
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s15">
+    <span class="section-num">15</span>
+    <h2 class="section-heading">Your Rights — CCPA (California Users)</h2>
+    <div class="section-body">
+      <p>
+        If you are a California resident, the <strong>California Consumer Privacy Act (CCPA)</strong>, as amended by the <strong>California Privacy Rights Act (CPRA)</strong>, provides you with specific rights regarding your personal information.
+      </p>
+      <ul class="rights-list">
+        <li><strong>Right to Know</strong> — You may request disclosure of the categories and specific pieces of personal information we have collected about you, as well as our business or commercial purpose for collecting it.</li>
+        <li><strong>Right to Delete</strong> — You may request deletion of personal information we have collected, subject to certain exceptions.</li>
+        <li><strong>Right to Correct</strong> — You may request correction of inaccurate personal information.</li>
+        <li><strong>Right to Opt-Out of Sale or Sharing</strong> — <strong>We do not sell or share personal information</strong> as defined by the CCPA. We do not sell data to data brokers or third-party advertisers for their own use.</li>
+        <li><strong>Right to Limit Use of Sensitive Personal Information</strong> — We do not collect sensitive personal information as defined by the CPRA.</li>
+        <li><strong>Right to Non-Discrimination</strong> — We will not discriminate against you for exercising your CCPA rights.</li>
+      </ul>
+      <p>
+        To submit a CCPA request, email us at <a href="mailto:iamitachi494&#64;gmail.com">iamitachi494&#64;gmail.com</a> with the subject line <em>"CCPA Privacy Request."</em> We will respond within <strong>45 days</strong>.
+      </p>
+      <p>
+        <em>Note: Because we do not sell personal information, certain CCPA provisions regarding opt-out of sale may not apply to our operations. However, we honour all rights listed above in good faith.</em>
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s16">
+    <span class="section-num">16</span>
+    <h2 class="section-heading">Your Rights — Bangladesh &amp; General Users</h2>
+    <div class="section-body">
+      <p>
+        Bangladesh's <strong>Digital Security Act 2018</strong> and the proposed <strong>Personal Data Protection Act</strong> (in legislative development) provide a framework for data protection. We voluntarily adopt the following principles for all users regardless of jurisdiction:
+      </p>
+      <ul class="rights-list">
+        <li><strong>Transparency</strong> — We clearly explain what data we collect and why.</li>
+        <li><strong>Purpose Limitation</strong> — Data is collected only for specific, stated purposes and not used beyond those.</li>
+        <li><strong>Data Minimisation</strong> — We collect only what is necessary.</li>
+        <li><strong>Integrity &amp; Confidentiality</strong> — We protect data against unauthorised access and disclosure.</li>
+        <li><strong>Accountability</strong> — As site owner, Mahadi Islam Alif is responsible for compliance with this policy.</li>
+      </ul>
+      <p>
+        Any user worldwide may email us at <a href="mailto:iamitachi494&#64;gmail.com">iamitachi494&#64;gmail.com</a> to ask questions about their data, request corrections, or ask for deletion of form submissions. We respond to all requests within 30 days.
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s17">
+    <span class="section-num">17</span>
+    <h2 class="section-heading">Children's Privacy</h2>
+    <div class="section-body">
+      <p>
+        Gratis Pages is a general-audience website intended for users of all ages who enjoy reading. However, we do not knowingly collect personal information from children under the age of <strong>13</strong> (or under <strong>16</strong> for users in the European Union, in accordance with GDPR Article 8).
+      </p>
+      <p>
+        Our Book Request Form requires an email address. If you are a parent or guardian and believe your child under 13 has submitted personal information through our form without your consent, please contact us immediately at <a href="mailto:iamitachi494&#64;gmail.com">iamitachi494&#64;gmail.com</a> and we will delete that information promptly.
+      </p>
+      <p>
+        Google AdSense and AdMob comply with the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and the <strong>EU Kids Online</strong> framework. Where we can detect that a user may be a minor, non-personalised ads are served.
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s18">
+    <span class="section-num">18</span>
+    <h2 class="section-heading">Third-Party Links</h2>
+    <div class="section-body">
+      <p>
+        Gratis Pages may contain links to external websites, including links to PDF files hosted on third-party servers. These sites operate independently and have their own privacy policies, which we encourage you to read.
+      </p>
+      <p>
+        We have no control over and assume no responsibility for the content, privacy practices, or security of any third-party sites. A link from Gratis Pages does not imply endorsement of that site or its privacy practices.
+      </p>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s19">
+    <span class="section-num">19</span>
+    <h2 class="section-heading">Changes to This Policy</h2>
+    <div class="section-body">
+      <p>
+        We may update this Privacy Policy from time to time to reflect changes in our practices, the services we use, or applicable law. When we make material changes, we will:
+      </p>
+      <ul class="rights-list">
+        <li>Update the <strong>Effective Date</strong> at the top of this page</li>
+        <li>Where reasonably possible, notify users who have submitted their email via the Book Request Form</li>
+      </ul>
+      <p>
+        We encourage you to review this page periodically. Your continued use of Gratis Pages after any change constitutes acceptance of the updated policy. If you do not agree with the updated terms, please discontinue use of the site.
+      </p>
+      <div class="highlight-box">
+        <strong>Current version:</strong> 1.0 &nbsp;|&nbsp; <strong>Effective:</strong> April 1, 2026 &nbsp;|&nbsp; <strong>Last reviewed:</strong> April 1, 2026
+      </div>
+    </div>
+  </section>
+
+  <section class="policy-section" id="s20">
+    <span class="section-num">20</span>
+    <h2 class="section-heading">Contact Us</h2>
+    <div class="section-body">
+      <p>
+        For any questions, concerns, or requests relating to this Privacy Policy or your personal data, please contact the data controller:
+      </p>
+      <div class="contact-box">
+        <span class="contact-box-label">Data Controller</span>
+        <div class="contact-box-name">Mahadi Islam Alif</div>
+        <div class="contact-box-detail">Individual operator — Gratis Pages</div>
+        <div class="contact-box-detail">Based in Bangladesh</div>
+        <div class="contact-box-detail">
+          Email: <a href="mailto:iamitachi494&#64;gmail.com">iamitachi494&#64;gmail.com</a>
+        </div>
+        <div class="contact-box-detail">
+          Website: <a href="https://gratispages.netlify.app" target="_blank" rel="noopener">gratispages.netlify.app</a>
+        </div>
+        <div class="contact-box-detail">
+          Portfolio: <a href="https://mahadiislamalif.netlify.app" target="_blank" rel="noopener">mahadiislamalif.netlify.app</a>
+        </div>
+      </div>
+      <p style="margin-top:1.25rem">
+        We aim to respond to all privacy-related enquiries within <strong>30 days</strong>. For urgent matters or GDPR erasure requests, please include <em>"Privacy Request — Urgent"</em> in your subject line.
+      </p>
+    </div>
+  </section>
+
+  <div class="policy-footer">
+    <p>
+      © 2026 Gratis Pages &nbsp;·&nbsp;
+      Built by <a href="https://mahadiislamalif.netlify.app" target="_blank" rel="noopener">Mahadi Islam Alif</a>
+      &nbsp;·&nbsp;
+      <a href="/">Back to Library</a>
+    </p>
+    <p style="margin-top:0.4rem; font-size:0.65rem; color:#3f4257">
+      This policy was drafted in good faith to comply with GDPR, CCPA/CPRA, Google Publisher Policies,<br>
+      Google AdSense Terms, Google Analytics Terms, AdMob policies, and general best practices.
+    </p>
+  </div>
+
+</main>
+
+<script>
+/* ── SCROLL PROGRESS BAR ── */
+var scrollLine = document.getElementById('scrollLine');
+window.addEventListener('scroll', function() {
+  var scrollTop    = window.scrollY || document.documentElement.scrollTop;
+  var docHeight    = document.documentElement.scrollHeight - window.innerHeight;
+  var progress     = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  scrollLine.style.width = progress.toFixed(2) + '%';
+}, { passive: true });
+
+/* ── STAGGERED SECTION ANIMATIONS ── */
+(function() {
+  var sections = document.querySelectorAll('.policy-section');
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  sections.forEach(function(s, i) {
+    s.style.animationDelay   = (i * 0.04) + 's';
+    s.style.animationPlayState = 'paused';
+    io.observe(s);
+  });
+})();
+</script>
+</body>
+</html>
