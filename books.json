@@ -208,11 +208,19 @@
     "pdfUrl": "pdfs/fatherland-1775032921272.pdf"
   },
   {
-    "name": "Read People Like a Book: How to Analyze, Understand, and Predict People’s Emotions, Thoughts, Intentions, and Behaviors",
+    "name": "Read People Like a Book: How to Analyze, Understand, and Predict Peopleâs Emotions, Thoughts, Intentions, and Behaviors",
     "photo": "covers/read-people-like-a-book-how-to-analyze-understand-and-predict-peoples-emotions-thoughts-intentions-and-behaviors-1775042548127.jpg",
     "author": "Patrick King",
     "genre": "Psychology",
     "slug": "read-people-like-a-book-how-to-analyze-understand-and-predict-peoples-emotions-thoughts-intentions-and-behaviors",
     "pdfUrl": "https://content.fimsschools.com/academy.fims.org.pk/Read%20People%20Like%20a%20Book%20(Patrick%20King).pdf"
+  },
+  {
+    "name": "Dopamine Detox: A Short Guide to Remove Distractions and Get Your Brain to Do Hard Things (Bangla)",
+    "photo": "covers/dopamine-detox-a-short-guide-to-remove-distractions-and-get-your-brain-to-do-hard-things-bangla-1775063081813.jpg",
+    "author": "Thibaut Meurisse",
+    "genre": "Self-Help",
+    "slug": "dopamine-detox-a-short-guide-to-remove-distractions-and-get-your-brain-to-do-hard-things-bangla",
+    "pdfUrl": "https://dn790006.ca.archive.org/0/items/dopamine-detox-pdf-book/%E0%A6%A1%E0%A7%8B%E0%A6%AA%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%A8%20%E0%A6%A1%E0%A6%BF%E0%A6%9F%E0%A6%95%E0%A7%8D%E0%A6%B8.pdf"
   }
 ]
