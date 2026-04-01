@@ -349,6 +349,71 @@ header {
   gap: 1.4rem;
 }
 
+/* ========= SKELETON LOADING ANIMATION ========= */
+.skeleton-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  animation: skeletonPulse 1.4s ease-in-out infinite;
+}
+
+.skeleton-cover {
+  aspect-ratio: 2/3;
+  background: linear-gradient(90deg, #12131f 25%, #1c1d2c 50%, #12131f 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite linear;
+}
+
+.skeleton-body {
+  padding: 0.85rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skeleton-title {
+  height: 1.2rem;
+  width: 85%;
+  background: linear-gradient(90deg, #1a1b28 25%, #252636 50%, #1a1b28 75%);
+  background-size: 200% 100%;
+  border-radius: 6px;
+  animation: shimmer 1.2s infinite linear;
+}
+
+.skeleton-author {
+  height: 0.7rem;
+  width: 60%;
+  background: linear-gradient(90deg, #1a1b28 25%, #252636 50%, #1a1b28 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: shimmer 1.2s infinite linear;
+}
+
+.skeleton-cta {
+  margin-top: 0.25rem;
+  height: 0.7rem;
+  width: 40%;
+  background: linear-gradient(90deg, #1a1b28 25%, #252636 50%, #1a1b28 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: shimmer 1.2s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes skeletonPulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+  100% { opacity: 0.6; }
+}
+
+/* actual card styles */
 .book-card {
   display: flex;
   flex-direction: column;
@@ -432,7 +497,13 @@ header {
 .empty-msg { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--cream); }
 .empty-sub { font-size: 0.82rem; color: var(--muted); margin-top: 0.35rem; }
 
-.loading-state { grid-column: 1/-1; text-align: center; padding: 5rem 2rem; color: var(--muted); font-size: 0.875rem; }
+.loading-state {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 5rem 2rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
 
 /* ─── DRAWER BACKDROP ─── */
 .drawer-backdrop {
@@ -651,7 +722,15 @@ footer { display: none; }
     <span class="section-count" id="bookCount">Loading…</span>
   </div>
   <div class="book-grid" id="bookGrid" role="list">
-    <div class="loading-state" aria-live="polite">Loading library…</div>
+    <!-- Skeleton loading cards (will be replaced after fetch) -->
+    <div class="skeleton-card" aria-hidden="true"><div class="skeleton-cover"></div><div class="skeleton-body"><div class="skeleton-title"></div><div class="skeleton-author"></div><div class="skeleton-cta"></div></div></div>
+    <div class="skeleton-card" aria-hidden="true"><div class="skeleton-cover"></div><div class="skeleton-body"><div class="skeleton-title"></div><div class="skeleton-author"></div><div class="skeleton-cta"></div></div></div>
+    <div class="skeleton-card" aria-hidden="true"><div class="skeleton-cover"></div><div class="skeleton-body"><div class="skeleton-title"></div><div class="skeleton-author"></div><div class="skeleton-cta"></div></div></div>
+    <div class="skeleton-card" aria-hidden="true"><div class="skeleton-cover"></div><div class="skeleton-body"><div class="skeleton-title"></div><div class="skeleton-author"></div><div class="skeleton-cta"></div></div></div>
+    <div class="skeleton-card" aria-hidden="true"><div class="skeleton-cover"></div><div class="skeleton-body"><div class="skeleton-title"></div><div class="skeleton-author"></div><div class="skeleton-cta"></div></div></div>
+    <div class="skeleton-card" aria-hidden="true"><div class="skeleton-cover"></div><div class="skeleton-body"><div class="skeleton-title"></div><div class="skeleton-author"></div><div class="skeleton-cta"></div></div></div>
+    <div class="skeleton-card" aria-hidden="true"><div class="skeleton-cover"></div><div class="skeleton-body"><div class="skeleton-title"></div><div class="skeleton-author"></div><div class="skeleton-cta"></div></div></div>
+    <div class="skeleton-card" aria-hidden="true"><div class="skeleton-cover"></div><div class="skeleton-body"><div class="skeleton-title"></div><div class="skeleton-author"></div><div class="skeleton-cta"></div></div></div>
   </div>
 </main>
 
