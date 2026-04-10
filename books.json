@@ -208,7 +208,7 @@
     "pdfUrl": "pdfs/fatherland-1775032921272.pdf"
   },
   {
-    "name": "Read People Like a Book: How to Analyze, Understand, and Predict PeopleÃÂ¢ÃÂÃÂs Emotions, Thoughts, Intentions, and Behaviors",
+    "name": "Read People Like a Book: How to Analyze, Understand, and Predict PeopleÃÂÃÂ¢ÃÂÃÂÃÂÃÂs Emotions, Thoughts, Intentions, and Behaviors",
     "photo": "covers/read-people-like-a-book-how-to-analyze-understand-and-predict-peoples-emotions-thoughts-intentions-and-behaviors-1775042548127.jpg",
     "author": "Patrick King",
     "genre": "Psychology",
@@ -358,5 +358,13 @@
     "genre": "",
     "slug": "1984",
     "pdfUrl": "https://dn790002.ca.archive.org/0/items/NineteenEightyFour-Novel-GeorgeOrwell/orwell1984.pdf"
+  },
+  {
+    "name": "Getting to Yes",
+    "photo": "covers/getting-to-yes-1775847511577.jpg",
+    "author": "Roger Fisher and William Ury",
+    "genre": "Psychology",
+    "slug": "getting-to-yes",
+    "pdfUrl": "https://www.rhetoricinstitute.edu.gr/wp-content/uploads/2017/09/fisher-getting-to-yes.pdf"
   }
 ]
