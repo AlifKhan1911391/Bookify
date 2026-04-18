@@ -208,7 +208,7 @@
     "pdfUrl": "pdfs/fatherland-1775032921272.pdf"
   },
   {
-    "name": "Read People Like a Book: How to Analyze, Understand, and Predict PeopleÃÂÃÂ¢ÃÂÃÂÃÂÃÂs Emotions, Thoughts, Intentions, and Behaviors",
+    "name": "Read People Like a Book: How to Analyze, Understand, and Predict PeopleÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs Emotions, Thoughts, Intentions, and Behaviors",
     "photo": "covers/read-people-like-a-book-how-to-analyze-understand-and-predict-peoples-emotions-thoughts-intentions-and-behaviors-1775042548127.jpg",
     "author": "Patrick King",
     "genre": "Psychology",
@@ -366,5 +366,13 @@
     "genre": "Psychology",
     "slug": "getting-to-yes",
     "pdfUrl": "https://www.rhetoricinstitute.edu.gr/wp-content/uploads/2017/09/fisher-getting-to-yes.pdf"
+  },
+  {
+    "name": "The Art of Wealth Creation (Bangla)",
+    "photo": "covers/the-art-of-wealth-creation-bangla-1776541849622.jpg",
+    "author": "Waliullah Bhuiyan",
+    "genre": "Finance",
+    "slug": "the-art-of-wealth-creation-bangla",
+    "pdfUrl": "pdfs/the-art-of-wealth-creation-bangla-1776541849622.pdf"
   }
 ]
